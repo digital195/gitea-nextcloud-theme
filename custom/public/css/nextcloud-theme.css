@@ -1,0 +1,166 @@
+/*
+	nextcloud-theme.css
+
+	Author: 2020 Sebastian Loer
+	Description: Gitea theme to make it look like my nextcloud and other stuff
+*/
+
+body {
+    --primary-color: #c00000;
+    --primary-color-light: #ff2727;
+    --text-primary-color: #ffffff;
+    --input-focus-color: #fd9494;
+
+    --heatmap-0: #FAFAFA;
+    --heatmap-1: #e17500;
+    --heatmap-2: #e16100;
+    --heatmap-3: #e14d00;
+    --heatmap-4: #e13300;
+    --heatmap-5: #c30000;
+}
+
+/*
+	theme font
+*/
+*:not(.markdown:not(code), .ui.accordion .title:not(.ui), .ui.button, .ui.card > .content > .header.ui.card > .content > .header, .ui.category.search > .results .category > .name, .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="file"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="text"], .ui.form input[type="time"], .ui.form input[type="url"], .ui.header, .ui.input > input, .ui.input input, .ui.items > .item > .content > .header, .ui.language > .menu > .item, .ui.list .list > .item .header, .ui.list > .item .header, .ui.menu, .ui.message .header, .ui.modal > .header, .ui.popup > .header, .ui.search > .results .result .title, .ui.search > .results > .message .header, .ui.statistic > .label, .ui.statistic > .value, .ui.statistics .statistic > .label, .ui.statistics .statistic > .value, .ui.steps .step .title, .ui.text.container, body, h1, h2, h3, h4, h5, textarea) {
+    font-family: 'Nunito', 'Open Sans', Frutiger, Calibri, 'Myriad Pro', Myriad, sans-serif !important;
+}
+
+/*
+	Navbar
+*/
+#navbar {
+    background-color: var(--primary-color) !important;
+    background-image: linear-gradient(40deg, var(--primary-color) 0%, var(--primary-color-light) 100%) !important; /* remove when no linear gradient on header*/
+    color: var(--text-primary-color) !important;
+    min-height: 50px !important;
+    padding: 0px !important;
+}
+
+.bar {
+    margin: 0px !important;
+}
+
+#navbar i,
+#navbar span,
+#navbar .item {
+    color: var(--text-primary-color);
+}
+
+#navbar .brand {
+    padding: 0px;
+    padding-left: 12px;
+    margin-right: 10px !important;
+    width: 62px;
+    height: 50px;
+}
+
+#navbar .brand img {
+    width: inherit !important;
+    max-width: 62px;
+}
+
+#navbar .poping,
+#navbar .poping i,
+#navbar .item {
+    color: inherit;
+}
+
+.ui.dropdown .menu .fitted svg {
+    color: var(rgba(0,0,0,.87)) !important;
+}
+
+/*
+	text color
+*/
+.ui .text.blue, .inline.field a svg, .ui .text.black a:hover, .ui.right.links a {
+    color: var(--primary-color) !important;
+}
+
+/*
+	folder color
+*/
+.repository.file.list #repo-files-table tbody .svg.octicon-file-directory, .repository.file.list #repo-files-table tbody .svg.octicon-file-submodule {
+    color: var(--primary-color) !important;
+}
+
+/*
+	link color
+*/
+.ui.dropdown .menu > .item {
+    color: rgba(0,0,0,.87) !important; /* default color */
+}
+
+a.button:not(.blue):not(.ui), tbody a:not(.blue), .item a:not(.blue):not(.ui), a.header:hover {
+    color: var(--primary-color) !important;
+}
+
+/*
+	button color
+*/
+.ui.blue.button, .ui.blue.buttons, .ui.tiny.blue.buttons .ui.button, .ui.blue.labels .label, .ui.ui.ui.blue.label {
+    background-color: var(--primary-color) !important;
+}
+
+.ui.basic.blue.button, .ui.basic.blue.buttons .button {
+    box-shadow: inset 0 0 0 1px var(--input-focus-color) !important;
+    color: var(--text-primary-color) !important;
+}
+
+/*
+	fix focus
+*/
+.ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="url"]:focus, .ui.form textarea:focus, .ui.selection.dropdown:focus, .ui.selection.active.dropdown, .ui.selection.active.dropdown .menu, .ui.checkbox input:checked:focus ~ label::before, .ui.checkbox input:not([type="radio"]):indeterminate:focus ~ label::before, .ui.checkbox input:focus ~ label::before, .ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="url"]:focus, .ui.input.focus > input, .ui.input > input:focus {
+    border-color: var(--input-focus-color) !important;
+}
+
+.ui.action.input:not([class*="left action"]) > input:focus {
+    border-right-color: var(--input-focus-color) !important;
+}
+
+/*
+	a
+*/
+a, a:hover {
+    color: var(--primary-color);
+}
+
+.ui.breadcrumb a, .ui.breadcrumb a:hover {
+    color: var(--primary-color);
+
+}
+
+/*
+	dropzone
+*/
+.ui.form .dropzone {
+    border: 2px dashed var(--primary-color);
+}
+
+/*
+	heatmap color
+*/
+
+.heatmap-color-0 {
+    background-color: var(--heatmap-0);
+}
+
+.heatmap-color-1 {
+    background-color: var(--heatmap-1);
+}
+
+.heatmap-color-2 {
+    background-color: var(--heatmap-2);
+}
+
+.heatmap-color-3 {
+    background-color: var(--heatmap-3);
+}
+
+.heatmap-color-4 {
+    background-color: var(--heatmap-4);
+}
+
+.heatmap-color-5 {
+    background-color: var(--heatmap-5);
+}
