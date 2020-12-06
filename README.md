@@ -49,17 +49,26 @@ gitea
         public\
             css\
             fonts\
-            img\
         templates\
             custom\
     ...
 ```
 
+Also you need to add the theme to your app.ini config file.
+
+```
+[ui]
+THEMES        = gitea,arc-green,nextcloud
+DEFAULT_THEME = nextcloud
+```
+
+
 After that you need to restart your Gitea server. \
 If you installed the Gitea server with a system service you can simply run ``systemctl restart gitea``. [(Gitea Docs)](https://docs.gitea.io/en-us/linux-service/) \
 If you run your Gitea service with Docker you can simply run ``docker restart CONTAINER`` [(Docker Docs)](https://docs.docker.com/engine/reference/commandline/restart/)
 
-After the restart the styles should be loaded, and the look of your side should have changed.
+After the restart the styles should be loaded, and the look of your side should have changed. \
+If the look hasn't changed already you need to change it manually in your profile settings unter ``Settings\Account\Default Theme``
 
 Sometimes when you edited the files there could be a problem with the caching of the gitea server. \
 Just rename the files restart the server and rename them back as a dirty fix.
