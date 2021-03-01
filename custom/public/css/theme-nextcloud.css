@@ -22,7 +22,9 @@ body {
 /*
 	theme font
 */
-*:not(.markdown:not(code), .ui.accordion .title:not(.ui), .ui.button, .ui.card > .content > .header.ui.card > .content > .header, .ui.category.search > .results .category > .name, .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="file"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="text"], .ui.form input[type="time"], .ui.form input[type="url"], .ui.header, .ui.input > input, .ui.input input, .ui.items > .item > .content > .header, .ui.language > .menu > .item, .ui.list .list > .item .header, .ui.list > .item .header, .ui.menu, .ui.message .header, .ui.modal > .header, .ui.popup > .header, .ui.search > .results .result .title, .ui.search > .results > .message .header, .ui.statistic > .label, .ui.statistic > .value, .ui.statistics .statistic > .label, .ui.statistics .statistic > .value, .ui.steps .step .title, .ui.text.container, body, h1, h2, h3, h4, h5, textarea) {
+
+
+*:not(.markdown:not(code), .ui.accordion .title:not(.ui), .ui.button, .ui.card > .content > .header.ui.card > .content > .header, .ui.category.search > .results .category > .name, .ui.form input:not([type]), .ui.form input[type="date"], .ui.form input[type="datetime-local"], .ui.form input[type="email"], .ui.form input[type="file"], .ui.form input[type="number"], .ui.form input[type="password"], .ui.form input[type="search"], .ui.form input[type="tel"], .ui.form input[type="text"], .ui.form input[type="time"], .ui.form input[type="url"], .ui.header, .ui.input > input, .ui.input input, .ui.items > .item > .content > .header, .ui.language > .menu > .item, .ui.list .list > .item .header, .ui.list > .item .header, .ui.menu, .ui.message .header, .ui.modal > .header, .ui.popup > .header, .ui.search > .results .result .title, .ui.search > .results > .message .header, .ui.statistic > .label, .ui.statistic > .value, .ui.statistics .statistic > .label, .ui.statistics .statistic > .value, .ui.steps .step .title, .ui.text.container, body, h1, h2, h3, h4, h5, textarea, .icon, .fa) {
     font-family: 'Nunito', 'Open Sans', Frutiger, Calibri, 'Myriad Pro', Myriad, sans-serif !important;
 }
 
@@ -98,7 +100,7 @@ a.button:not(.blue):not(.ui), tbody a:not(.blue), .item a:not(.blue):not(.ui), a
 /*
 	button color
 */
-.ui.blue.button, .ui.blue.buttons, .ui.tiny.blue.buttons .ui.button, .ui.blue.labels .label, .ui.ui.ui.blue.label {
+.ui.blue.button, .ui.blue.buttons, .ui.tiny.blue.buttons .ui.button, .ui.blue.labels .label, .ui.ui.ui.blue.label, .ui.primary.button, .ui.primary.buttons {
     background-color: var(--primary-color) !important;
 }
 
@@ -112,6 +114,10 @@ a.button:not(.blue):not(.ui), tbody a:not(.blue), .item a:not(.blue):not(.ui), a
 */
 .ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="url"]:focus, .ui.form textarea:focus, .ui.selection.dropdown:focus, .ui.selection.active.dropdown, .ui.selection.active.dropdown .menu, .ui.checkbox input:checked:focus ~ label::before, .ui.checkbox input:not([type="radio"]):indeterminate:focus ~ label::before, .ui.checkbox input:focus ~ label::before, .ui.form input:not([type]):focus, .ui.form input[type="date"]:focus, .ui.form input[type="datetime-local"]:focus, .ui.form input[type="email"]:focus, .ui.form input[type="file"]:focus, .ui.form input[type="number"]:focus, .ui.form input[type="password"]:focus, .ui.form input[type="search"]:focus, .ui.form input[type="tel"]:focus, .ui.form input[type="text"]:focus, .ui.form input[type="time"]:focus, .ui.form input[type="url"]:focus, .ui.input.focus > input, .ui.input > input:focus {
     border-color: var(--input-focus-color) !important;
+}
+
+.ui.ui.ui.green.label {
+	color: #fff !important;
 }
 
 .ui.action.input:not([class*="left action"]) > input:focus {
